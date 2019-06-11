@@ -10,3 +10,9 @@ import ReactDom from 'react-dom'
 var myDiv=React.createElement('div',{id : 'mydiv',title : 123},'123213');
 
 ReactDom.render(myDiv, document.getElementById('app'));
+/*
+* 由于在js中手写创建DOM过于麻烦,REACT开始提出了一套JSX语法规范代码,能够让我们在js中书写类似HTML的代码
+* 原理:符合XML规范的JS语法
+* 注意:在JS中会将其转换成React.createDocument,再渲染到页面中
+* cnpm i babel-preset-react -D
+* */

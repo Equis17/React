@@ -2,7 +2,7 @@ const path = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    entry: path.join(__dirname, './React之简介/01React之创建简单地项目.js'),
+    entry: path.join(__dirname, './React之简介/03React之使用构造函数生成DOM.js'),
     output: {
         path: path.join(__dirname, './dist'),
         filename: 'bundle.js'
