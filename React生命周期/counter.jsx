@@ -7,6 +7,8 @@ export default class Counter extends React.Component {
         this.state = {
             count: this.props.initCount
         }
+        //在这里可以改变this的指向 返回this的函数引用
+        // this.increment=this.increment.bind(this,arg1,arg2)
     }
 
 
@@ -33,6 +35,10 @@ export default class Counter extends React.Component {
     }
 
     render() {
+        //短路运算 如果值为空则不执行
+        //在组件运行阶段中 每当调用render函数的时候 页面上的dom也是旧的
+        //仅仅新渲染到内存中的新元素 虚拟dom和state都是最新的
+        console.log(this.refs.h3&&this.refs.h3.innerHTML);
         return (
             <div>
                 <h1>这是计数器</h1>
@@ -68,5 +74,7 @@ export default class Counter extends React.Component {
     componentWillUpdate(nextProps, nextState, nextContext) {
         //此时页面上的dom是旧的,进行dom操作都是旧dom
     }
-
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        //虚拟dom和state都是最新的 现在页面上是最新的dom 可以去操作也哦面
+    }
 }
