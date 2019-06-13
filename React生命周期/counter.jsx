@@ -19,7 +19,6 @@ export default class Counter extends React.Component {
     static propTypes = {
         initCount: ReactTypes.number
     }
-
     componentWillMount() {
         //页面挂载前执行
         //能够访问到数据和自定义方法
