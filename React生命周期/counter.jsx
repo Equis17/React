@@ -70,11 +70,10 @@ export default class Counter extends React.Component {
         // return this.state.count%2===0
         return nextState.count%2===0
     }
-
     componentWillUpdate(nextProps, nextState, nextContext) {
         //此时页面上的dom是旧的,进行dom操作都是旧dom
     }
     componentDidUpdate(prevProps, prevState, snapshot) {
-        //虚拟dom和state都是最新的 现在页面上是最新的dom 可以去操作也哦面
+        //虚拟dom和state都是最新的 现在页面上是最新的dom 可以去操作DOM
     }
 }
